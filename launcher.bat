@@ -547,17 +547,12 @@ if exist "%svConfig%\Motd.txt" (
     if /i "%wmotd%"=="Y" del "%svConfig%\Motd.txt"
 )
 
-:: Loop for multiple lines
+:: loop for multiple lines
 :WriteMOTD
 set /p "motdTXT=> "
 if /i "%motdTXT%"=="/done" goto Main
-
-:: Trim spaces (optional, prevents trailing spaces)
 for /f "tokens=* delims= " %%A in ("%motdTXT%") do set "motdTXT=%%A"
-
-:: Write line without extra trailing spaces
 <nul set /p ="%motdTXT%" >> "%svConfig%\Motd.txt"
-
 goto WriteMOTD
 
 :Admins
@@ -573,15 +568,11 @@ if "%sID64%"=="/done" ( goto Main) else ( call :WriteAdmins )
 
 :WriteAdmins
 for /f "tokens=* delims= " %%A in ("%sID64%") do set "sID64=%%A"
-
-:: Write to file without adding extra space or newline
 <nul set /p ="%sID64%" >> "%svConfig%\Admins.txt"
-:: Add a proper newline manually
 >> "%svConfig%\Admins.txt" echo.
 call :DoAdmins
 
 :MapCycle
-:: Map-array-to-prefix mapping (arr variable will be used to read cpMap[] etc.)
 if "%getGM%"=="1"  (set "arr=cpMap")
 if "%getGM%"=="2"  (set "arr=cphMap")
 if "%getGM%"=="7"  (set "arr=pMap")
@@ -602,7 +593,7 @@ if /i %mcy%==Y ( call :DoMapCycle ) else ( goto Main )
 for /L %%I in (0,1,37) do (
   call set "rawMap=%%%arr%[%%I]%%%"
   if defined rawMap (
-    :: Trim everything before "Scenario"
+    :: trim everything before "Scenario"
     set "scene=!rawMap:*Scenario=Scenario!"
 
     echo !scene!>>"%svConfig%\MapCycle.txt"
@@ -725,4 +716,5 @@ exit /b
 echo.
 echo Launching server...
 echo You may now close this window at anytime.
+
 InsurgencyServer.exe %launchCmd%
