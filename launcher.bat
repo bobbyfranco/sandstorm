@@ -693,7 +693,7 @@ echo [^*] Token(s) have been set.
 ping localhost -n 2 >nul
 goto Main
 
-:: experimental, probably not necessary
+:: necessary for changing out teams, gamemodes and/or maps
 :Memory
 set VarMem1=%getGM%
 set VarMem2=%getTM%
@@ -727,3 +727,4 @@ echo.
 echo Launching server...
 echo You may now close this window at anytime.
 InsurgencyServer.exe %launchCmd%
+
