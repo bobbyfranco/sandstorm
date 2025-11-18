@@ -308,12 +308,8 @@ if /I "%load_cfg%"=="Y" (
 :: if random map saved to config then randomize map, else go to map setup to assign previously selected map
 if "!getMap!"=="1" (
     call :RandomMap
-    call :SetVars
-    goto Init
 ) else (
 	call :MapSetup
-	call :SetVars
-	goto Main
 )
 
 :: gamemode selection
@@ -727,3 +723,4 @@ echo.
 echo Launching server...
 echo You may now close this window at anytime.
 InsurgencyServer.exe %launchCmd%
+
