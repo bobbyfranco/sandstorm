@@ -81,7 +81,7 @@ set Map[36]=Canyon?Scenario_Crossing_Checkpoint_Security
 set Map[37]=Canyon?Scenario_Crossing_Checkpoint_Insurgents
 exit /b
 
-:HardcoreCheckpoint
+:Hardcore
 set Map[0]=Town?Scenario_Hideout_Checkpoint_Security?Mutators=Hardcore
 set Map[1]=Town?Scenario_Hideout_Checkpoint_Insurgents?Mutators=Hardcore
 set Map[2]=Precinct?Scenario_Precinct_Checkpoint_Security?Mutators=Hardcore
@@ -734,4 +734,5 @@ echo.
 echo Launching server...
 echo You may now close this window at anytime.
 InsurgencyServer.exe %launchCmd%
+
 
