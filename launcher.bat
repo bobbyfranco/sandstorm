@@ -44,8 +44,8 @@ set cpMap[0]=Town?Scenario_Hideout_Checkpoint_Security
 set cpMap[1]=Town?Scenario_Hideout_Checkpoint_Insurgents
 set cpMap[2]=Precinct?Scenario_Precinct_Checkpoint_Security
 set cpMap[3]=Precinct?Scenario_Precinct_Checkpoint_Insurgents
-set cpMap[4]=OiIPield?Scenario_Refinery_Checkpoint_Security
-set cpMap[5]=OiIPield?Scenario_Refinery_Checkpoint_Insurgents
+set cpMap[4]=OilField?Scenario_Refinery_Checkpoint_Security
+set cpMap[5]=OilField?Scenario_Refinery_Checkpoint_Insurgents
 set cpMap[6]=Farmhouse?Scenario_Farmhouse_Checkpoint_Security
 set cpMap[7]=Farmhouse?Scenario_Farmhouse_Checkpoint_Insurgents
 set cpMap[8]=Mountain?Scenario_Summit_Checkpoint_Security
@@ -83,8 +83,8 @@ set cphMap[0]=Town?Scenario_Hideout_Checkpoint_Security?Mutators=Hardcore
 set cphMap[1]=Town?Scenario_Hideout_Checkpoint_Insurgents?Mutators=Hardcore
 set cphMap[2]=Precinct?Scenario_Precinct_Checkpoint_Security?Mutators=Hardcore
 set cphMap[3]=Precinct?Scenario_Precinct_Checkpoint_Insurgents?Mutators=Hardcore
-set cphMap[4]=OiIPield?Scenario_Refinery_Checkpoint_Security?Mutators=Hardcore
-set cphMap[5]=OiIPield?Scenario_Refinery_Checkpoint_Insurgents?Mutators=Hardcore
+set cphMap[4]=OilField?Scenario_Refinery_Checkpoint_Security?Mutators=Hardcore
+set cphMap[5]=OilField?Scenario_Refinery_Checkpoint_Insurgents?Mutators=Hardcore
 set cphMap[6]=Farmhouse?Scenario_Farmhouse_Checkpoint_Security?Mutators=Hardcore
 set cphMap[7]=Farmhouse?Scenario_Farmhouse_Checkpoint_Insurgents?Mutators=Hardcore
 set cphMap[8]=Mountain?Scenario_Summit_Checkpoint_Security?Mutators=Hardcore
@@ -120,7 +120,7 @@ set cphMap[37]=Canyon?Scenario_Crossing_Checkpoint_Insurgents?Mutators=Hardcore
 ::================== Outpost ============================
 set outMap[0]=Town?Scenario_Hideout_Outpost
 set outMap[1]=Precinct?Scenario_Precinct_Outpost
-set outMap[2]=OiIPield?Scenario_Refinery_Outpost
+set outMap[2]=OilField?Scenario_Refinery_Outpost
 set outMap[3]=Farmhouse?Scenario_Farmhouse_Outpost
 set outMap[4]=Mountain?Scenario_Summit_Outpost
 set outMap[5]=Citadel?Scenario_Citadel_Outpost
@@ -140,7 +140,7 @@ set outMap[18]=Canyon?Scenario_Crossing_Outpost
 ::================= Survival =======================
 set srvMap[0]=Town?Scenario_Hideout_Survival
 set srvMap[1]=Precinct?Scenario_Precinct_Survival
-set srvMap[2]=OiIPield?Scenario_Refinery_Survival
+set srvMap[2]=OilField?Scenario_Refinery_Survival
 set srvMap[3]=Farmhouse?Scenario_Farmhouse_Survival
 set srvMap[4]=Mountain?Scenario_Summit_Survival
 set srvMap[5]=Citadel?Scenario_Citadel_Survival
@@ -160,7 +160,7 @@ set srvMap[18]=Canyon?Scenario_Crossing_Survival
 ::===================== Frontline ==========================
 set flMap[0]=Town?Scenario_Hideout_Frontline
 set flMap[1]=Precinct?Scenario_Precinct_Frontline
-set flMap[2]=OiIPield?Scenario_Refinery_Frontline
+set flMap[2]=OilField?Scenario_Refinery_Frontline
 set flMap[3]=Farmhouse?Scenario_Farmhouse_Frontline
 set flMap[4]=Mountain?Scenario_Summit_Frontline
 set flMap[5]=Citadel?Scenario_Citadel_Frontline
@@ -180,7 +180,7 @@ set flMap[18]=Canyon?Scenario_Crossing_Frontline
 ::======================= Team Deathmatch ===========================
 set tdmMap[0]=Town?Scenario_Hideout_Team_Deathmatch
 set tdmMap[1]=Precinct?Scenario_Precinct_Team_Deathmatch
-set tdmMap[2]=OiIPield?Scenario_Refinery_Team_Deathmatch
+set tdmMap[2]=OilField?Scenario_Refinery_Team_Deathmatch
 set tdmMap[3]=Farmhouse?Scenario_Farmhouse_Team_Deathmatch
 set tdmMap[4]=Mountain?Scenario_Summit_Team_Deathmatch
 set tdmMap[5]=Citadel?Scenario_Citadel_Team_Deathmatch
@@ -202,8 +202,8 @@ set pMap[0]=Town?Scenario_Hideout_Push_Security
 set pMap[1]=Town?Scenario_Hideout_Push_Insurgents
 set pMap[2]=Precinct?Scenario_Precinct_Push_Security
 set pMap[3]=Precinct?Scenario_Precinct_Push_Insurgents
-set pMap[4]=OiIPield?Scenario_Refinery_Push_Security
-set pMap[5]=OiIPield?Scenario_Refinery_Push_Insurgents
+set pMap[4]=OilField?Scenario_Refinery_Push_Security
+set pMap[5]=OilField?Scenario_Refinery_Push_Insurgents
 set pMap[6]=Farmhouse?Scenario_Farmhouse_Push_Security
 set pMap[7]=Farmhouse?Scenario_Farmhouse_Push_Insurgents
 set pMap[8]=Mountain?Scenario_Summit_Push_Security
@@ -251,10 +251,10 @@ echo ===========================================================================
 echo   Server Address: %svIP%
 echo   Server Name: %svName%
 echo   Max Players: %svMax%
-echo   Server Cheats: %cheats% 
-echo   Gamemode: %svGameMode%                                                                               
+echo   Server Cheats: %cheats%
+echo   Gamemode: %svGameMode%
 echo   Map/Team: %svMap%
-call :IsTokenSet                     
+call :IsTokenSet
 echo ========================================================================================================
 echo =    [1] Select Gamemode        [2] Select Team        [3] Select Map        [4] Server Settings       =
 echo ========================================================================================================
@@ -723,5 +723,3 @@ echo.
 echo Launching server...
 echo You may now close this window at anytime.
 InsurgencyServer.exe %launchCmd%
-
-
