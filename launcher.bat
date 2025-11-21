@@ -678,6 +678,7 @@ if "%TK%"=="1" (
     )
 )
 
+::replace this cmd check with "goto Init" for quicker launch
 echo.
 echo !launchCmd!
 echo.
@@ -734,5 +735,6 @@ echo.
 echo Launching server...
 echo You may now close this window at anytime.
 InsurgencyServer.exe %launchCmd%
+
 
 
